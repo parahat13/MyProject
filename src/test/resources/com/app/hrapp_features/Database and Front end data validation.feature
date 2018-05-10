@@ -1,4 +1,3 @@
-
 Feature: Hr Application Database and UI data verification
 
   Background: 

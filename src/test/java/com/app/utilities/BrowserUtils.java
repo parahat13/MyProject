@@ -23,13 +23,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BrowserUtils {
 
+	public static void scrollDown() {
+		JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+		jse.executeScript("scroll(0, 250);");
+	}
+
 	public static void hover(WebElement element) {
 		Actions actions = new Actions(Driver.getDriver());
 		actions.moveToElement(element).perform();
 	}
+
 	/**
-	 * return a list of string from a list of elements
-	 * ignores any element with no text
+	 * return a list of string from a list of elements ignores any element with no
+	 * text
+	 * 
 	 * @param list
 	 * @return
 	 */
